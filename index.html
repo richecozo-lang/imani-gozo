@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>今仁豪造事務所</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="エコアクション21審査人・キャッシュフローコーチ・AI経営プロデューサー 今仁豪造。環境への投資を、お金の言葉で語れる専門家として中小企業を支援します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 縦長の一枚もの。左に細い罫線の「台帳」軸、3資格を三つの柱として並べる */
+:root{
+  --paper:#F5F7F3;
+  --surface:#FFFFFF;
+  --ink:#16261F;
+  --ink-soft:#4A5B53;
+  --line:#CBD5CE;
+  --moss:#2F5D45;
+  --brass:#9A7A2E;
+  --wash:#E6EEE8;
+  --ph:#FFF4D6;
+  --ph-line:#C9A84A;
+  --f-display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#101814;--surface:#16211B;--ink:#E4ECE6;--ink-soft:#A3B3AA;--line:#2D3D35;
+  --moss:#7DBF99;--brass:#D3B263;--wash:#1C2A23;--ph:#3A3220;--ph-line:#A88A3C;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#101814;--surface:#16211B;--ink:#E4ECE6;--ink-soft:#A3B3AA;--line:#2D3D35;
+  --moss:#7DBF99;--brass:#D3B263;--wash:#1C2A23;--ph:#3A3220;--ph-line:#A88A3C;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0;line-height:1.35}
+p{margin:0}
+.label{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+a{color:var(--moss)}
+:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+
+/* header */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;flex-wrap:wrap}
+.mark{font-family:var(--f-display);font-weight:700;font-size:18px;letter-spacing:.08em}
+.top nav{display:flex;gap:20px;font-size:14px}
+.top nav a{color:var(--ink-soft);text-decoration:none}
+.top nav a:hover{color:var(--moss)}
+
+/* hero */
+.hero .wrap{padding-block:72px 64px;display:grid;gap:28px}
+.hero h1{font-size:clamp(30px,6vw,52px);letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--moss);border-bottom:3px solid var(--brass);padding-bottom:2px}
+.hero .lead{font-size:clamp(16px,2.2vw,18px);color:var(--ink-soft);max-width:36em}
+.who{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.who .name{font-family:var(--f-display);font-size:26px;font-weight:700;letter-spacing:.12em}
+.who .kana{font-size:13px;color:var(--ink-soft);letter-spacing:.1em}
+
+/* three pillars */
+.pillars{background:var(--wash);border-block:1px solid var(--line)}
+.pillars .wrap{padding-block:56px}
+.pillars h2{font-size:clamp(22px,3.6vw,30px);margin-top:8px;margin-bottom:32px}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
+.col{padding:24px 22px 26px;border-right:1px solid var(--line);display:grid;gap:10px;align-content:start}
+.col:last-child{border-right:0}
+.col .axis{font-family:var(--f-mono);font-size:12px;color:var(--brass);letter-spacing:.12em}
+.col h3{font-size:21px}
+.col .cred{font-size:13px;color:var(--ink-soft)}
+.col p{font-size:15px}
+.join{margin-top:28px;font-family:var(--f-display);font-size:clamp(17px,2.6vw,21px);line-height:1.7}
+.join b{color:var(--moss)}
+
+/* services */
+.svc .wrap{padding-block:64px;display:grid;gap:28px}
+.svc h2{font-size:clamp(22px,3.6vw,30px)}
+.list{display:grid;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding-block:22px;border-bottom:1px solid var(--line)}
+.row h3{font-size:18px}
+.row .for{font-size:13px;color:var(--brass);font-family:var(--f-mono);letter-spacing:.06em;margin-top:6px}
+.row p{color:var(--ink-soft);font-size:15px}
+
+/* profile */
+.prof{background:var(--surface);border-top:1px solid var(--line)}
+.prof .wrap{padding-block:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:40px}
+.prof h2{font-size:clamp(22px,3.6vw,30px);margin-top:8px}
+dl{margin:0;display:grid;grid-template-columns:7em minmax(0,1fr);border-top:1px solid var(--line)}
+dt,dd{margin:0;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+dt{color:var(--ink-soft);font-size:13px;padding-top:16px}
+.ph{background:var(--ph);border:1px dashed var(--ph-line);padding:1px 6px;border-radius:3px;font-size:.92em}
+
+/* contact */
+.contact .wrap{padding-block:64px 80px;display:grid;gap:18px}
+.contact h2{font-size:clamp(22px,3.6vw,30px)}
+.contact .box{border:1px solid var(--ink);padding:24px;display:grid;gap:12px;max-width:560px;background:var(--surface)}
+.contact .box div{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:12px;font-size:15px}
+.contact .box span:first-child{color:var(--ink-soft);font-size:13px;padding-top:2px}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:24px;font-size:12px;color:var(--ink-soft);font-family:var(--f-mono);letter-spacing:.04em}
+
+@media (max-width:720px){
+  .cols{grid-template-columns:1fr}
+  .col{border-right:0;border-bottom:1px solid var(--line)}
+  .col:last-child{border-bottom:0}
+  .row{grid-template-columns:1fr;gap:6px}
+  .prof .wrap{grid-template-columns:1fr;gap:24px}
+  .top nav{gap:14px}
+  .hero .wrap{padding-block:48px 44px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="mark">今仁豪造事務所</div>
+    <nav aria-label="ページ内">
+      <a href="#pillars">専門</a>
+      <a href="#services">できること</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#contact">ご連絡</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="label">Eco Action 21 × Cash Flow × AI</span>
+      <h1>環境への投資を、<br><em>お金の言葉</em>で語れる専門家。</h1>
+      <p class="lead">環境の取り組みは「コスト」と見られがちです。環境経営の審査人、キャッシュフローコーチ、AI経営プロデューサーという三つの立場から、その取り組みが会社の手元にどれだけお金を残すのかを、経営者と同じ言葉でお話しします。</p>
+      <div class="who">
+        <span class="name">今仁 豪造</span>
+        <span class="kana">IMANI GOZO</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillars" id="pillars">
+    <div class="wrap">
+      <span class="label">Three roles</span>
+      <h2>環境・お金・AIを、一つの窓口で。</h2>
+      <div class="cols">
+        <div class="col">
+          <span class="axis">環境</span>
+          <h3>エコアクション21審査人</h3>
+          <span class="cred">環境省策定の環境経営システム「EA21」の認定審査人</span>
+          <p>中小企業が無理なく続けられる環境経営の仕組みづくりと、その運用状況を見てきました。</p>
+        </div>
+        <div class="col">
+          <span class="axis">お金</span>
+          <h3>キャッシュフローコーチ</h3>
+          <span class="cred">日本キャッシュフローコーチ協会 認定</span>
+          <p>数字が苦手な経営者にも分かる形で会社のお金の流れを見える化し、意思決定を支えます。</p>
+        </div>
+        <div class="col">
+          <span class="axis">AI</span>
+          <h3>AI経営プロデューサー</h3>
+          <span class="cred">AIを経営と業務に取り入れる仕組みづくり</span>
+          <p>書類作業や日々の対応をAIで省力化し、経営者が考えることに時間を使える会社を一緒につくります。</p>
+        </div>
+      </div>
+      <p class="join">環境の取り組みを<b>仕組み</b>として整え、<b>お金の流れ</b>で評価し、<b>AI</b>で回る形にする。<br>この三つを行き来できることが、私の強みです。</p>
+    </div>
+  </section>
+
+  <section class="svc" id="services">
+    <div class="wrap">
+      <div>
+        <span class="label">What I do</span>
+        <h2>こんなご相談に対応しています</h2>
+      </div>
+      <div class="list">
+        <div class="row">
+          <div><h3>環境経営の仕組みづくり</h3><div class="for">EA21</div></div>
+          <p>エコアクション21をはじめとする環境経営の取り組みについて、進め方をご相談いただけます。</p>
+        </div>
+        <div class="row">
+          <div><h3>お金の流れの見える化</h3><div class="for">Cash Flow</div></div>
+          <p>決算書を経営者の言葉に置き換え、手元にお金が残る経営を一緒に考えます。</p>
+        </div>
+        <div class="row">
+          <div><h3>環境投資の判断</h3><div class="for">GX × Cash Flow</div></div>
+          <p>省エネ設備や脱炭素の取り組みが、会社のお金にどう効くのかを整理し、投資判断をお手伝いします。</p>
+        </div>
+        <div class="row">
+          <div><h3>AI活用・業務の自動化</h3><div class="for">AI × Management</div></div>
+          <p>書類の読み取りや作成、問い合わせ対応など、手間のかかる業務にAIを取り入れる道筋を一緒に描きます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prof" id="profile">
+    <div class="wrap">
+      <div>
+        <span class="label">Profile</span>
+        <h2>プロフィール</h2>
+      </div>
+      <dl>
+        <dt>氏名</dt><dd>今仁 豪造</dd>
+        <dt>資格・肩書</dt><dd>エコアクション21 認定審査人<br>キャッシュフローコーチ（日本キャッシュフローコーチ協会 認定）<br>AI経営プロデューサー</dd>
+        <dt>所属</dt><dd>株式会社エコイマジン</dd>
+        <dt>拠点</dt><dd>埼玉県越谷市</dd>
+        <dt>目指すもの</dt><dd style="font-family:var(--f-display);font-size:17px">すべての人が希望を持てる世界を目指して</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <span class="label">Contact</span>
+      <h2>ご連絡先</h2>
+      <p style="color:var(--ink-soft)">初めての方も、お気軽にご連絡ください。</p>
+      <div class="box">
+        <div><span>メール</span><a href="mailto:info@ecoimagine.co.jp">info@ecoimagine.co.jp</a></div>
+        <div><span>電話</span><a href="tel:09017951179">090-1795-1179</a></div>
+        <div><span>所在地</span><span>埼玉県越谷市宮本町1-2-7<br>マルクエクセラン407</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 今仁豪造事務所</div>
+</footer>
+
+</body>
+</html>
